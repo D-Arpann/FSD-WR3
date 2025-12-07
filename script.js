@@ -52,10 +52,10 @@ searchInput.addEventListener('input', function() {
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const nextId = allMovies.length + 1;
+    // const nextId = allMovies.length + 1;
 
     const newMovie = {
-        id: String(new Date()),
+        id: String(Date.now()),
         title: document.getElementById('title').value,
         genre: document.getElementById('genre').value,
         year: parseInt(document.getElementById('year').value)
@@ -119,4 +119,5 @@ function deleteMovie(movieId) {
     })
     .catch(error => console.error('Error deleting movie:', error));
 }
+
 
